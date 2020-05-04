@@ -17,5 +17,5 @@ export interface IEntry {
 export interface IStatus {
   time: Date
   activity: string
-  duration: Number
+  duration: number
 }

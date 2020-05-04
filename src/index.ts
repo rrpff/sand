@@ -25,11 +25,12 @@ export default class Sand {
     await this.appendLog(`START ${activity}`)
   }
 
-  public async stop () {
+  public async stop (): Promise<IStatus> {
     const status = await this.status()
     if (status === null) throw new Error("Nothing is running")
 
     await this.appendLog("STOP")
+    return status
   }
 
   public async status (): Promise<IStatus> {

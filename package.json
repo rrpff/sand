@@ -1,4 +1,9 @@
 {
+  "name": "sand",
+  "main": "dist/index.js",
+  "bin": {
+    "sand": "dist/cli.js"
+  },
   "scripts": {
     "build": "tsc",
     "test": "jest"
@@ -7,14 +12,20 @@
     "chalk": "^4.0.0",
     "minimist": "^1.2.5",
     "moment": "^2.25.2",
+    "pluralize": "^8.0.0",
+    "touch": "^3.1.0",
     "user-home": "^2.0.0"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
+    "@types/minimist": "^1.2.0",
     "@types/moment": "^2.13.0",
+    "@types/pluralize": "0.0.29",
+    "@types/touch": "^3.1.1",
     "@types/user-home": "^2.0.0",
     "jest": "^25.5.4",
     "ts-jest": "^25.4.0",
+    "ts-node": "^8.10.1",
     "typescript": "^3.8.3"
   }
 }

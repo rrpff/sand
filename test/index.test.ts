@@ -83,13 +83,25 @@ describe("stopping tracking", () => {
 
   describe("when an activity is running", () => {
     it("should append a STOP line to the tracking file with the correct date and time", async () => {
-      await atTime("2020-05-04 13:55:12", () => sand.start("jumping for joy"))
+      await atTime("2020-05-04 13:55:12", () => sand.start("eating noodles"))
       await atTime("2020-05-04 14:55:12", () => sand.stop())
 
       expect(await filesystem.readFile(TRACKING_FILE_PATH)).toEqual(
-        "2020-05-04 13:55:12 START jumping for joy\n" +
+        "2020-05-04 13:55:12 START eating noodles\n" +
         "2020-05-04 14:55:12 STOP\n"
       )
+    })
+
+    it("should return a status", async () => {
+      await atTime("2020-05-04 13:55:12", () => sand.start("eating noodles"))
+      await atTime("2020-05-04 14:55:12", async () => {
+        const status = await sand.stop()
+        expect(status).toEqual({
+          activity: "eating noodles",
+          time: new Date("2020-05-04 13:55:12"),
+          duration: 60 * 60 * 1000
+        })
+      })
     })
   })
 
