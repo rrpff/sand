@@ -1,0 +1,24 @@
+~~~~~~ sand ~~~~~~
+
+To set up for the first time:
+
+$ cd <any-directory>
+$ sand init <your-new-sand-file>
+
+To start a new activity:
+
+$ sand start <describe your activity>
+
+To stop the current activity:
+
+$ sand stop
+
+To view the current status:
+
+$ sand status [--sum]
+
+To view a day:
+
+$ sand today [--sum]
+$ sand yesterday [--sum]
+$ sand query 2020-05-20 [--sum]
