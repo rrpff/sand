@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "minimist": "^1.2.5",
+    "moment": "^2.25.2",
+    "user-home": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/moment": "^2.13.0",
+    "@types/user-home": "^2.0.0",
+    "jest": "^25.5.4",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
+  }
+}
