@@ -1,4 +1,4 @@
-import { IFilesystem } from "../src"
+import { IFilesystem } from "../src/interfaces"
 
 export const atTime = async (time: string, fn: Function) => {
   const spy = jest.spyOn(Date, "now")

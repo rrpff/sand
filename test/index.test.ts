@@ -1,6 +1,7 @@
 import path from "path"
 import home from "user-home"
-import Sand, { IFilesystem } from "../src"
+import Sand from "../src"
+import { IFilesystem } from "../src/interfaces"
 import { InMemoryFilesystem, atTime } from "./helpers"
 
 const SAND_CONFIG_PATH = path.join(home, ".sand-config")
