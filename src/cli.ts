@@ -128,11 +128,19 @@ const sumStatuses = (statuses: IStatus[]) => {
     }))
   }, [])
 
-  return summed.map(s => ({
+  const sumEntries = summed.map(s => ({
     activityType: s.activity.split(" ")[0],
     activityDescription: s.activity.split(" ").slice(1).join(" "),
     totalDuration: displayDuration(s.totalDuration)
   }))
+
+  sumEntries.push({
+    activityType: "total",
+    activityDescription: "",
+    totalDuration: displayDuration(summed.reduce((sum, entry) => sum + entry.totalDuration, 0))
+  })
+
+  return sumEntries
 }
 
 ;(async () => {
