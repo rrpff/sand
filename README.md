@@ -1,6 +1,6 @@
 # sand
 
-a little flat file time tracker 
+a little flat file time tracker
 
 ## usage
 
@@ -29,6 +29,9 @@ To view a day:
 $ sand today [--sum]
 $ sand yesterday [--sum]
 $ sand query 2020-05-20 [--sum]
+
+To search:
+$ sand query programming [--sum]
 ```
 
 ## building locally
