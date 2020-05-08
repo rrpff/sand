@@ -1,3 +1,10 @@
+# sand
+
+a little flat file time tracker 
+
+## usage
+
+```
 ~~~~~~ sand ~~~~~~
 
 To set up for the first time:
@@ -22,3 +29,20 @@ To view a day:
 $ sand today [--sum]
 $ sand yesterday [--sum]
 $ sand query 2020-05-20 [--sum]
+```
+
+## building locally
+
+```
+$ git clone https://github.com/zuren/sand
+$ cd sand
+$ npm install
+$ npm run build
+$ npm link
+```
+
+Then set up your time tracker file, i.e.
+
+```
+$ sand init ~/time-log
+```
