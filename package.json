@@ -11,7 +11,7 @@
   "dependencies": {
     "chalk": "^4.0.0",
     "minimist": "^1.2.5",
-    "moment": "^2.25.2",
+    "moment": "^2.29.2",
     "pluralize": "^8.0.0",
     "touch": "^3.1.0",
     "user-home": "^2.0.0"
